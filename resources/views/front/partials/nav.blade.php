@@ -18,7 +18,7 @@
                 <ul class="nav navbar-nav">
                     
         <li>
-            <a href="shooter-index.html#preorder">
+            <a href="/">
                 Home
                 
                 
@@ -26,7 +26,7 @@
             </a>
         </li>
         <li>
-            <a href="shooter-blog.html">
+            <a href="/add-tournament">
                 Add Tournament
                 
                 
@@ -34,7 +34,7 @@
             </a>
         </li>
         <li>
-            <a href="shooter-forums.html">
+            <a href="/tournament">
                 Manage Tournament
                 
                 
@@ -48,9 +48,9 @@
             <ul class="nav navbar-nav navbar-right">
                 
 
-                
+                    @guest
                     <li>
-                        <a href="shooter-forums.html">
+                        <a href="/login">
                             Login
                             
                             
@@ -59,13 +59,31 @@
                     </li>
 
                     <li>
-                        <a href="shooter-forums.html">
+                        <a href="/register">
                             Register
                             
                             
                             <span class="label">User</span>
                         </a>
                     </li>
+                    @endguest
+
+                    @auth
+                    <li>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            Logout
+                            
+                            
+                            <span class="label">{{ Auth::user()->name }}</span>
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                    @endauth
                 
             </ul>
             

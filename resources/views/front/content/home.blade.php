@@ -66,8 +66,8 @@ Home
             <div class="container">
                 <div class="text-center">
                     <h1 style="margin-bottom:10px;">PUBG Calculator</h1>
-                    <h3 style="margin-bottom:30px;">Make your tournament a lot easier</h3>
-                    <a class="btn btn-md video-popup" href="https://www.youtube.com/watch?v=c7nRTF2SowQ"><i class="fa fa-play-circle"></i>&nbsp; Start Now</a>
+                    <h3 style="margin-bottom:30px;">Manage your tournament a lot easier</h3>
+                    <a class="btn btn-md" href="/add-tournament"><i class="fa fa-play-circle"></i>&nbsp; Start Now</a>
                 </div>
             </div>
         </div>
