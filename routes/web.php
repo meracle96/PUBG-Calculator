@@ -23,6 +23,11 @@ Route::get('/add-point', 'PagesController@addPoint')->name('front.addPoint');
 Route::post('/add-point', 'PagesController@addPointPost')->name('front.addPoint.post');
 
 Route::get('/tournament', 'PagesController@tournaments')->name('front.tournaments');
+Route::get('/tournament/{id}', 'PagesController@tournamentsDetail')->name('front.tournamentsDetail');
+Route::post('/tournament/{id}', 'PagesController@tournamentsDetailPost')->name('front.tournamentsDetailPost');
+
+Route::get('/result/{id_tournament}/{match}', 'GuestController@perMatch')->name('guest.resultPerMatch');
+Route::get('/result/{id_tournament}', 'GuestController@finalScore')->name('guest.finalScore');
 
 Auth::routes();
 

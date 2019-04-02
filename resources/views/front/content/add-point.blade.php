@@ -19,8 +19,8 @@ Add Point Data
 <section class="youplay-banner banner-top youplay-banner-parallax xsmall">
     
         <div class="image" data-speed="0.4">
-            <img src="assets/images/dark/banner-blog-bg.jpg" alt="" class="jarallax-img">
-        </div>
+                <img src="front/banner-header.jpg" alt="" class="jarallax-img">
+            </div>
     
 
     <div class="info">

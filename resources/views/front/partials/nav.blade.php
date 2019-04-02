@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <img src="{{ asset('front/assets/images/shooter/logo.png') }}" alt="">
                 </a>
             

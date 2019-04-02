@@ -23,12 +23,12 @@ My Tournaments
     <div class="container youplay-news">
         <!-- News List -->
         <div class="col-md-12">
-            @foreach($tournaments as $tournament)
+            @forelse($tournaments as $tournament)
             <!-- Single News Block -->
             <div class="news-one">
                 <div class="row vertical-gutter">
                     <div class="col-md-4">
-                        <a href="blog-post-1.html" class="angled-img">
+                        <a href="{{ route('front.tournamentsDetail', ['id' => $tournament->id]) }}" class="angled-img">
                             <div class="img">
                                 <img src="front/tourney.jpg" alt="">
                             </div>
@@ -36,7 +36,7 @@ My Tournaments
                     </div>
                     <div class="col-md-8">
                         <div class="clearfix" style="margin-top:20px;">
-                            <h2 class="h2 pull-left m-0" style="text-transform:uppercase;"><a href="blog-post-1.html">{{ $tournament->nama }}</a></h2>
+                            <h2 class="h2 pull-left m-0" style="text-transform:uppercase;"><a href="{{ route('front.tournamentsDetail', ['id' => $tournament->id]) }}">{{ $tournament->nama }}</a></h2>
                             <span class="date pull-right"><i class="fa fa-calendar"></i> Created at : {{ $tournament->created_at->diffForHumans() }}</span>
                         </div>
                         <h3>Total Teams : {{ $tournament->total_team }} | Total Matches : {{ $tournament->total_match }}</h3>
@@ -45,12 +45,14 @@ My Tournaments
                                 {{ $tournament->deskripsi }}
                             </p>
                         </div>
-                        <a href="blog-post-1.html" class="btn read-more pull-left">Manage Tournament</a>
+                        <a href="{{ route('front.tournamentsDetail', ['id' => $tournament->id]) }}" class="btn read-more pull-left">Manage Tournament</a>
                     </div>
                 </div>
             </div>
             <!-- /Single News Block -->
-            @endforeach
+            @empty
+            <h1>You didnt have any Tournament.<br> Add Tournament <a href="/add-tournament">Here</a></h1>
+            @endforelse
             <br>
             <div class="row">
                 <div class="col-md-12">

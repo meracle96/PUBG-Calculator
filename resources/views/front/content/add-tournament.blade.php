@@ -19,7 +19,7 @@ Add New Tournament
 <section class="youplay-banner banner-top youplay-banner-parallax xsmall">
     
         <div class="image" data-speed="0.4">
-            <img src="assets/images/dark/banner-blog-bg.jpg" alt="" class="jarallax-img">
+            <img src="front/banner-header.jpg" alt="" class="jarallax-img">
         </div>
     
 
@@ -47,7 +47,8 @@ Add New Tournament
         <div class="col-md-12">
             <!-- Billing Information -->
             <h2 class="mt-0">Step 1 - Tournament Details</h2>
-
+            <h4>Maximal 25 Teams. [ Example : Tournament ABC - Group A, Tournament ABC - Group B ]</h4>
+            <br>
             <!-- Country -->
             <div class="row">
                 <div class="col-md-12">
